@@ -38,19 +38,12 @@ Filled missing Embarked values with the mode.
 Dropped the Cabin column due to excessive missing data.
 
 
-#### Encoding Categorical Features:
-Applied label encoding to Sex (male: 0, female: 1).
-Used one-hot encoding for Embarked (creating dummy variables for ports C, Q, S).
-
-
 #### Feature Scaling:
 Standardized numerical features (Age, Fare) using StandardScaler from scikit-learn.
 
 
 #### Outlier Detection and Removal:
 Visualized outliers in Age and Fare using boxplots (Seaborn).
-Removed outliers based on the interquartile range (IQR) method.
-
 
 #### Output:
 Saved the cleaned dataset as cleaned_titanic.csv.
@@ -96,19 +89,9 @@ python titanic_preprocessing.py
 ```
 The script will process the Titanic-Dataset.csv, generate boxplot visualizations (saved in screenshots/), and output the cleaned dataset as cleaned_titanic.csv.
 
-
-# Challenges Faced
-
-Handling missing values in the Cabin column required deciding between imputation and dropping; dropping was chosen due to high missingness (~77%).
-Determining appropriate encoding methods (label vs. one-hot) for categorical variables to avoid introducing bias.
-Identifying and removing outliers without losing significant data required careful tuning of the IQR threshold.
-
 # Insights Gained
 
 Data preprocessing significantly impacts model performance by ensuring clean, consistent, and scaled data.
-Visualization (e.g., boxplots) is crucial for understanding data distribution and identifying anomalies.
-Encoding categorical variables correctly prevents misinterpretation by ML algorithms.
-
 # Submission Details
 
 GitHub Repository: [Link to my repository, e.g., https://github.com/revan-coder844/AI-ML-Internship-Task1]
